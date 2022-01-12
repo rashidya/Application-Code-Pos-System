@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="manageItemsFormContext" prefHeight="713.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos_system.controller.ManageItemsFormController">
+   <children>
+      <TextField fx:id="txtQtyOnHand" focusTraversable="false" layoutX="851.0" layoutY="191.0" prefHeight="31.0" prefWidth="90.0" />
+      <Text layoutX="851.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty On Hand">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtDiscount" focusTraversable="false" layoutX="679.0" layoutY="191.0" prefHeight="31.0" prefWidth="127.0" />
+      <Text layoutX="682.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblItem" focusTraversable="false" layoutX="32.0" layoutY="299.0" prefHeight="372.0" prefWidth="909.0">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="88.0" text="Item Code" />
+            <TableColumn fx:id="colItem" prefWidth="139.0" text="Item" />
+            <TableColumn fx:id="colPackSize" prefWidth="91.0" text="Pack Size" />
+            <TableColumn fx:id="colDescription" prefWidth="228.0" text="Description" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="133.0" text="Unit Price" />
+            <TableColumn fx:id="colDiscount" prefWidth="118.0" text="Discount" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="111.0" text="Qty On Hand" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtItemCode" editable="false" focusTraversable="false" layoutX="35.0" layoutY="122.0" prefHeight="31.0" prefWidth="162.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtUnitPrice" focusTraversable="false" layoutX="497.0" layoutY="122.0" prefHeight="31.0" prefWidth="243.0" />
+      <TextField fx:id="txtDescription" focusTraversable="false" layoutX="35.0" layoutY="192.0" prefHeight="31.0" prefWidth="627.0" />
+      <Text layoutX="763.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pack Size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="35.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="497.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="35.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtPackSize" focusTraversable="false" layoutX="763.0" layoutY="122.0" prefHeight="31.0" prefWidth="176.0" />
+      <Text layoutX="216.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtItem" focusTraversable="false" layoutX="215.0" layoutY="122.0" prefHeight="31.0" prefWidth="261.0" />
+      <Label layoutX="32.0" layoutY="61.0" text="MANAGE ITEMS">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Line endX="818.0" layoutX="121.0" layoutY="78.0" startX="112.0" strokeWidth="2.0" />
+      <JFXButton fx:id="btnAddUpdate" buttonType="RAISED" focusTraversable="false" layoutX="812.0" layoutY="238.0" onAction="#addOrUpdateItemOnAction" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #287229;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnRemove" buttonType="RAISED" disable="true" focusTraversable="false" layoutX="673.0" layoutY="238.0" onAction="#removeItemOnAction" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #c22020;" text="Remove" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton ellipsisString="" layoutX="33.0" layoutY="15.0" onAction="#openAdminFormOnAction" prefHeight="39.0" prefWidth="41.0" style="-fx-background-color: #287229;" textFill="#a7ab74">
+         <font>
+            <Font name="System Bold" size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView disable="true" fitHeight="26.0" fitWidth="28.0" layoutX="39.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pngfind.com-white-house-logo-png-5898244.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text layoutX="805.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" wrappingWidth="13.4072265625">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblTime" layoutX="785.0" layoutY="36.0" text="12 :12 AM">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="829.0" layoutY="14.0" text="2021/12/12">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

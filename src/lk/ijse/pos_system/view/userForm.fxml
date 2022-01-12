@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userFormContext" prefHeight="454.0" prefWidth="667.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos_system.controller.UserFormController">
+   <children>
+      <JFXButton alignment="BOTTOM_CENTER" ellipsisString="" focusTraversable="false" layoutX="389.0" layoutY="35.0" onAction="#openPlaceOrderForm" onMouseEntered="#playMouseEnterAnimation" prefHeight="180.0" prefWidth="229.0" ripplerFill="WHITE" style="-fx-background-color: #2e9e1d;" text="Place Customer Order" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" cache="true" focusTraversable="false" layoutX="389.0" layoutY="255.0" onAction="#openManageOrdersForm" prefHeight="180.0" prefWidth="229.0" ripplerFill="WHITE" style="-fx-background-color: #2e9e1d;" text="Manage Orders" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="117.0" fitWidth="119.0" layoutX="433.0" layoutY="62.0" onMouseClicked="#openPlaceOrderFormOnMouseClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pngaaa.com-1172027.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="116.0" fitWidth="119.0" layoutX="456.0" layoutY="277.0" onMouseClicked="#openManageOrdersFormOnMouseClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pngfind.com-sample-png-1329836.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="330.0" layoutY="16.0" orientation="VERTICAL" prefHeight="426.0" prefWidth="12.0" />
+      <Label layoutX="81.0" layoutY="16.0" prefHeight="69.0" prefWidth="173.0" text="WELCOME !">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="77.0" layoutY="366.0" prefHeight="69.0" prefWidth="202.0" text="2021-08-20">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="38.0" layoutY="229.0" prefHeight="141.0" prefWidth="259.0" text="10:08">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" focusTraversable="false" layoutX="107.0" layoutY="191.0" onAction="#logOutOnAction" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: #827e7e;" text="Log Out" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Circle fill="WHITE" layoutX="167.0" layoutY="127.0" radius="52.0" stroke="#838383" strokeType="INSIDE" strokeWidth="2.0" />
+      <ImageView fitHeight="95.0" fitWidth="110.0" layoutX="113.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/User-Profile-PNG-Clipart.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
